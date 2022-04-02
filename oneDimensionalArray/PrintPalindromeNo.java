@@ -1,5 +1,5 @@
 package oneDimensionalArray;
-import java.util.ArrayList;
+
 
 public class PrintPalindromeNo {
 
@@ -7,25 +7,30 @@ public class PrintPalindromeNo {
 
 
 		
-      int temp,rev=0,rem;
-		for(int i=1;i<=100;i++)
+      int temp,rem;
+      System.out.println("palindrome number between 10 to 100");
+		for(int i=10;i<=100;i++)
 		{
-		    	temp=i;
+			temp=i;
+			int rev=0;
+			
+			while(temp!=0)
+			{
 		    	rem=temp%10;
 		    	rev=rev*10+rem;
-		    	temp=temp/7;
-		    	
-		    	
+		    	temp=temp/10;
+			}
+	     	if(i==rev)
+	    	{
+	    		System.out.println(i);
+	    	}
+	    
+			
 		}
-		if(i==rev)
-    	{
-    		System.out.println(i+" is palindrome number");
-    	}
-    	else
-    	{
-    		System.out.println(i+" is not palindrome number");
-    	}
-	     
-	}
+			
+	           	
+		}
+		
+	
 
 }
